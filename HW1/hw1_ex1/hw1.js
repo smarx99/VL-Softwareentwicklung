@@ -24,10 +24,10 @@ let roleHeadExamination = {
     __proto__: roleProf,
     title: "Head of the Examination Board",
     getInfo() {
-        return `${super.getInfo()} The title is ${this.title}.`;
+        return `${super.getInfo()}`;
     },
     getDescription() {
-        return `${super.getDescription()}`;
+        return `${super.getDescription()} The title is ${this.title}.`;
     }
 };
 
@@ -35,10 +35,10 @@ let roleHeadDepartment = {
     __proto__: roleProf,
     title: "Head of the Department",
     getInfo() {
-        return `${super.getInfo()} The title is ${this.title}.`;
+        return `${super.getInfo()}`;
     },
     getDescription() {
-        return `${super.getDescription()}`;
+        return `${super.getDescription()} The title is ${this.title}.`;
     }
 };
 
