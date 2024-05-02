@@ -1,6 +1,6 @@
-package HW1.src;
+package HW1.hw1_ex2;
 
-import HW1.src.entities.*;
+import HW1.hw1_ex2.entities.*;
 
 public class Main {
     public static void main(String[]args){
