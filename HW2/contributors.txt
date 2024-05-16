@@ -1,6 +1,6 @@
-Contributors of Homework 1
+Contributors of Homework 2
 - Malin Böhme 7349793
 - Stefanie Marx 7351597
-- Lara Hitzemann
-- Marco Joost
+- Lara Hitzemann 7352052
+- Marco Joost 7364514
 - Imke Schwenke 7351430
