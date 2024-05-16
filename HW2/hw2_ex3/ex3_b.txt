@@ -1,0 +1,16 @@
+student1 + student2 + student3 is executed the following way:
+- student1 + student2:
+    - the __add__ method of the student class is called with student1 as the parameter self
+        and student2 as the parameter student.
+    - in that method an instance of the class LearningGroup ist created with student1
+    - then, the __add__ method of the class LearningGroup is called with the previously created
+        LearningGroup instance as self and student2 as student
+    - in this method, student2 is appended to the studentList of that LearningGroup
+    - The resulting LearningGroup instance is returned
+- group = student1 + student2:
+    - the results is stored in group
+- group + student3:
+    - The __add__ method of the LearningGroup called with group as self and student3 as student
+    - student3 is appended to the studentList of the LearningGroup instance
+    - the resulting LearningGroup instance is returned
+- the result is saved in the variable group 
