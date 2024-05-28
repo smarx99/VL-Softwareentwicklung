@@ -1,4 +1,4 @@
-package HW3;
+package HW3.hw3_ex3;
 
 import java.util.ArrayList;
 import java.util.Collections;

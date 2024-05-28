@@ -1,4 +1,4 @@
-package HW3;
+package HW3.hw3_ex3;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
