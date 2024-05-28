@@ -1,0 +1,70 @@
+Aufgabe 1
+
+REQ
+1: Overview of Available Rooms, Funkctional, The room booking service shall provide an overview of all available rooms in the selected university building,
+   Clarity: Specify what kind of overview is needed and what details about each room should be included.
+2: Updating, Quality, Room bookings shall be updated in real-time, that is: if a user is looking at the overview and another user at the same time books a room,
+   the overview shall be updated as fast as possible. (Specify timeframe of update in seconds)
+3: Authentification, Functional, Room booking shall only be possible for logged-in users with respective privileges (What kind of priviliges) Logged in, admin, user?
+4: Q! An initial version of the room booking service shall be ready after 5 months, the first public version must be finished after 1 year.
+   For the initial version used for testing among a small testing group, a simple text-based approach is fine, but for the final product, a graphical
+   representation is required so that users have an easier time using the system.
+   (What is included in each verison? What reqs have to be implementet for MVP)
+5: Input for Date and Time, Funtional, The user shall enter a date and time of their interest, Clear Req
+
+
+Aufgabe 2
+
+
++-----------+
+    |  Calendar |
+    +----+------+
+         |requires
+         |  +-----provides----+
+         v                    |
+    +----+----+    +----------v---------+
+    |  Users   +---->  Materials         |
+    +----+----+    +------+----+---------+
+         |requires       |requires
+         v               |
+    +----+----+    +-----v----+----------+
+    | Courses   <---+   RoomBooking     |
+    +----+----+    +----------^---------+
+         |requires          |
+         |                  |
+         |                  |requires
+         v                  |
+    +----+----+    +--------+---------+
+    |  Grades   <---+      Exams     |
+    +-----------+    +----------------+
+
+    Calendar-Users Interface (requires):
+        Purpose: The Calendar component requires user data to display personalized events.
+        Description: This interface fetches user-specific information, such as roles and preferences.
+
+    Users-Materials Interface (provides):
+        Purpose: The Users component provides user data and authentication services to Materials.
+        Description: This interface is used to verify the identity of users trying to access course materials and to manage permissions based on user roles.
+
+    Courses-Calendar Interface (requires):
+        Purpose: The Courses component requires Calendar to schedule and display course-related events.
+        Description: This interface is used to integrate course schedules into the calendar.
+    Courses-Users Interface (requires):
+        Purpose: The Courses component requires user data to manage course enrollments and roles.
+        Description: This interface helps in managing which users are enrolled in which courses and what roles they have.
+
+    RoomBooking-Courses Interface (provides):
+        Purpose: RoomBooking provides room scheduling data to Courses.
+        Description: This interface is used to allocate rooms for course-related events.
+
+    Grades-Courses Interface (requires):
+        Purpose: The Grades component requires course data to manage and record student grades.
+        Description: This interface allows Grades to fetch course structures, assignments, and student enrollments.
+
+    Exams-Grades Interface (provides):
+        Purpose: Exams provide examination results to the Grades component.
+        Description: This interface is used to transfer the results of online examinations to the Grades system for recording and further processing.
+
+    RoomBooking-Exams Interface (requires):
+        Purpose: RoomBooking requires data from Exams to schedule rooms for physical exams.
+        Description: This interface ensures that appropriate rooms are booked for examinations.
