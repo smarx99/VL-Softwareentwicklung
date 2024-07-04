@@ -1,0 +1,6 @@
+The code is developed in the composite pattern. The Component is an interface which declares common methods. 
+In this case the PlayerComponent Class serves as the Component.
+A leaf is an implementation of a component. These leafs do not have any children.
+In the given code the classes PlayerArm, PlayerHead and PlayerLeg are the leafs. The methods add and remove are empty in those classes.
+A composite is also an implementation of a component. However, it contains a list of leafs or other composites, thus, has children.
+In our case, PlayerBody and Player are composites.
